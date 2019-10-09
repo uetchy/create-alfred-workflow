@@ -1,7 +1,7 @@
 {
   "name": "create-alfred-workflow",
   "description": "Create Alfred Workflow",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "shx rm -rf dist && NODE_ENV=production tsc && shx chmod +x dist/cli.js",
     "dev": "tsc -w",
