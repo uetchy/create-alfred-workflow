@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "build": "shx rm -rf dist && NODE_ENV=production tsc && shx chmod +x dist/cli.js",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "release": "yarn build && np --otp"
   },
   "dependencies": {
     "create-whatever": "^5.0.0"
@@ -19,5 +20,9 @@
   "files": [
     "dist",
     "templates"
+  ],
+  "homepage": "https://github.com/uetchy/create-alfred-workflow",
+  "keywords": [
+    "create-app"
   ]
 }
