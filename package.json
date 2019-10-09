@@ -5,7 +5,8 @@
   "scripts": {
     "build": "shx rm -rf dist && NODE_ENV=production tsc && shx chmod +x dist/cli.js",
     "dev": "tsc -w",
-    "release": "yarn build && np --otp"
+    "release": "yarn build && np --otp",
+    "test": "yarn build"
   },
   "dependencies": {
     "create-whatever": "^5.0.0"
