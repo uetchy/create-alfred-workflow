@@ -1,9 +1,11 @@
 # Create Alfred Workflow
 
-> Create Alfred Workflow
+> Create Alfred Workflow.
 
 ## Usage
 
 ```bash
-npx create-alfred-workflow <name>
+yarn create alfred-workflow <name>
+# or
+npm create alfred-workflow <name>
 ```
