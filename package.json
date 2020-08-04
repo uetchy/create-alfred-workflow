@@ -2,29 +2,36 @@
   "name": "create-alfred-workflow",
   "description": "Create Alfred Workflow",
   "version": "1.0.0",
+  "author": "Yasuaki Uechi <y@uechi.io>",
   "scripts": {
-    "build": "shx rm -rf dist && NODE_ENV=production tsc && shx chmod +x dist/cli.js",
-    "dev": "tsc -w",
-    "release": "yarn build && np",
+    "build": "yarn build:ts --minify",
+    "build:ts": "tsup src/cli.ts",
+    "clean": "shx rm -rf dist",
+    "dev": "yarn build:ts --watch",
+    "release": "release-it",
     "test": "yarn build"
   },
   "dependencies": {
-    "create-create-app": "^5.7.0"
+    "create-create-app": "^6.0.0"
   },
   "devDependencies": {
+    "release-it": "^13.6.6",
     "shx": "^0.3.2",
+    "tsup": "^3.4.2",
     "typescript": "^3.9.7"
   },
-  "author": "Yasuaki Uechi <y@uechi.io>",
-  "license": "Apache-2.0",
   "bin": "dist/cli.js",
   "files": [
     "dist",
     "templates"
   ],
+  "bugs": {
+    "url": "https://github.com/uetchy/create-alfred-workflow/issues"
+  },
   "homepage": "https://github.com/uetchy/create-alfred-workflow",
   "keywords": [
-    "create-app",
-    "aflred"
-  ]
+    "alfred",
+    "create-app"
+  ],
+  "license": "Apache-2.0"
 }

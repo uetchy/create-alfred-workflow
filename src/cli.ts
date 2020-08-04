@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import {resolve} from 'path';
-import {create} from 'create-whatever';
+import { resolve } from 'path';
+import { create } from 'create-create-app';
 
 const caveat = `
 $ make link - Link your workflow to Alfred.
@@ -10,7 +10,8 @@ $ make package - Create .alfredworkflow package for the production release.
 `;
 
 create('create-alfred-workflow', {
-  templateRoot: resolve(__dirname, '../templates'),
+  templateRoot: resolve(__dirname, '..', 'templates'),
+  promptForTemplate: true,
   caveat,
   extra: {
     bundle_id: {

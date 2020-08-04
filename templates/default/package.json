@@ -1,0 +1,15 @@
+{
+  "name": "{{kebab name}}",
+  "description": "{{description}}",
+  "version": "0.0.0",
+  "author": "{{contact}}",
+  "scripts": {
+    "build": "pkg . --target node14 --output ./workflow/app",
+    "package": "npm run build && make package"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.8"
+  },
+  "bin": "index.js",
+  "license": "{{license}}"
+}
